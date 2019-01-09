@@ -3,7 +3,7 @@
 
 using namespace std;
 
-bool isPermutation(string a, string b)
+bool checkPermutation(string a, string b)
 {
 	if (a.size() != b.size())
 	{
@@ -26,13 +26,14 @@ bool isPermutation(string a, string b)
 			return false;
 		}
 	}
+
 	return true;
 }
 
 int main()
 {
-	string a = "HeloA";
+	string a = "Hello";
 	string b = "ellHo";
-	cout << isPermutation(a,b) << endl;
+	cout << checkPermutation(a, b) << endl;
 	system("pause");
 }
