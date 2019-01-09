@@ -1,6 +1,8 @@
+
+template <typename T>
 struct Node
 {
-    char data;
+    T data;
     Node *next;
 
     Node()
@@ -9,13 +11,13 @@ struct Node
         next = nullptr;
     }
 
-    Node(char value)
+    Node(T value)
     {
         data = value;
         next = nullptr;
     }
 
-    void insertValue(char value)
+    void insertValue(T value)
     {
         Node *element = new Node(value);
         Node *last = this;
@@ -26,7 +28,7 @@ struct Node
         last->next = element;
     }
 
-    Node *deleteNode(Node *root, char value)
+    Node *deleteNode(Node *root, T value)
     {
         Node *n = root;
         if (n->data == value)

@@ -3,12 +3,12 @@
 
 using namespace std;
 
-void removeDuplicates(Node *root)
+void removeDuplicates(Node<char> *root)
 {
-    Node *check = root;
+    Node<char> *check = root;
     while(check->next != nullptr)
     {
-        Node *runner = check;
+        Node<char> *runner = check;
         while(runner->next != nullptr)
         {
             if(runner->next->data == check->data)
@@ -27,9 +27,9 @@ void removeDuplicates(Node *root)
     }
 }
 
-void printNodes(Node *root)
+void printNodes(Node<char> *root)
 {
-    Node *runner = root;
+    Node<char> *runner = root;
     while(runner->next != nullptr)
     {
         cout << runner->data << " ";
@@ -40,7 +40,7 @@ void printNodes(Node *root)
 
 int main()
 {
-    Node *word = new Node('a');
+    Node<char> *word = new Node<char>('a');
     word->insertValue('e');
     word->insertValue('l');
     word->insertValue('e');
